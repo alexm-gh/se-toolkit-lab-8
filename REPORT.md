@@ -4,15 +4,15 @@
 
 ### Q1: "What is 2+2?"
 
-```
+
 2 + 2 = 4
-```
+
 
 ### Q2: "What is the agentic loop?"
 
 The agentic loop is the fundamental cycle that an AI agent follows to accomplish tasks autonomously. It typically consists of these core stages:
 
-```
+
 **The Agentic Loop Cycle:**
 
 1. **Perceive** — Gather information from the environment
@@ -46,13 +46,13 @@ This loop enables autonomous behavior — the agent doesn't just respond once, b
 - Self-correction — Detecting and fixing mistakes
 
 In my case, every time you give me a task, I go through this loop: I read the request, decide what tools to use, execute them, and then respond or continue iterating based on the results.
-```
+
 
 ### Q3: "What labs are available in our LMS?"
 
 The agent **does not have access to the live LMS backend** yet. It explored the local filesystem using built-in tools (`list_dir`, `read_file`) and found lab task descriptions in the repository:
 
-```
+
 Based on my exploration of the workspace, here are the available labs in your LMS:
 
 **Required Labs:**
@@ -68,13 +68,13 @@ This is Lab 8 — "The Agent is the Interface" from the Software Engineering Too
 natural-language interface to an LMS system, with capabilities for querying data, observability tools, and proactive health checks.                    
 
 Would you like me to read the details of any specific task?                                                      
-```
+
 
 ## Task 1B — Agent with LMS tools
 
 ### Q1: "What is the agentic loop?"
 
-```
+
 The agentic loop refers to the iterative process that autonomous AI agents follow to accomplish tasks. While the specific implementation can vary between different AI systems, a typical     
 agentic loop includes these core phases:                                                                                                                                                      
 
@@ -89,21 +89,21 @@ into smaller, manageable actions while adapting to new information or unexpected
 
 In my case as nanobot, I follow this pattern by receiving your requests, analyzing them, using appropriate tools to gather information or perform actions, observing the results, and then    
 determining the next steps in our conversation.    
-```
+
 
 ### Q2: "Is the LMS backend healthy?"
 
-```
+
 Let me check the health of the LMS backend:                                                                                                                
 
 Yes, the LMS backend is healthy. The system is operational with 56 items and no errors reported.                                                                                              
-```
+
 
 ## Task 1C — Skill prompt
 
 ### Q1: "Show me the scores"
 
-```
+
 I'll help you check the scores. First, let me see what labs are available in the system.
 
 I can see there are 8 labs available in the system. To show you the scores, I need to know which specific lab you're interested in. Here are the       
@@ -119,7 +119,7 @@ available labs:
  8 lab-08                                                                                                                                              
 
 Could you please specify which lab you'd like to see the scores for?                                                        
-```
+
 
 ## Task 2A — Deployed agent
 
