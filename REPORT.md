@@ -137,11 +137,31 @@ Could you please specify which lab you'd like to see the scores for?
 
 ## Task 2A — Deployed agent
 
-<!-- Paste a short nanobot startup log excerpt showing the gateway started inside Docker -->
+nanobot-1  | Using config: /app/nanobot/config.resolved.json
+nanobot-1  | 🐈 Starting nanobot gateway version 0.1.4.post5 on port 18790...
+nanobot-1  | 2026-04-02 15:12:02.818 | DEBUG    | nanobot.channels.registry:discover_all:64 - Skipping built-in channel 'matrix': Matrix dependencies not installed. Run: pip install nanobot-ai[matrix]
+nanobot-1  | Warning: No channels enabled
+nanobot-1  | ✓ Heartbeat: every 1800s
+nanobot-1  | 2026-04-02 15:12:02.993 | INFO     | nanobot.cron.service:start:202 - Cron service started with 0 jobs
+nanobot-1  | 2026-04-02 15:12:02.993 | INFO     | nanobot.heartbeat.service:start:124 - Heartbeat started (every 1800s)
+nanobot-1  | 2026-04-02 15:12:03.147 | WARNING  | nanobot.channels.manager:start_all:82 - No channels enabled
+nanobot-1  | 2026-04-02 15:12:04,300 INFO [mcp.server.lowlevel.server] [server.py:727] [trace_id=0 span_id=0 resource.service.name=mcp-lms trace_sampled=False] - Processing request of type ListToolsRequest
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_health' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_labs' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_learners' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_pass_rates' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_timeline' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_groups' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_top_learners' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_completion_rate' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_sync_pipeline' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | INFO     | nanobot.agent.tools.mcp:connect_mcp_servers:246 - MCP server 'lms': connected, 9 tools registered
+nanobot-1  | 2026-04-02 15:12:04.304 | INFO     | nanobot.agent.loop:run:280 - Agent loop started
 
 ## Task 2B — Web client
 
-<!-- Screenshot of a conversation with the agent in the Flutter web app -->
+![Nanobot chat](task2a_1.png)
+![Nanobot chat](task2a_2.png)
 
 ## Task 3A — Structured logging
 
