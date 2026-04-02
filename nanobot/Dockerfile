@@ -15,7 +15,7 @@ COPY --from=workspace nanobot-websocket-channel /app/nanobot-websocket-channel
 COPY . /app/nanobot
 
 # Create a minimal root pyproject.toml for the build.
-RUN printf '[project]\nname = "nanobot-build"\nversion = "0.1.0"\nrequires-python = ">=3.14.2"\n\n[tool.uv.workspace]\nmembers = ["nanobot", "mcp/mcp-lms", "nanobot-websocket-channel/nanobot-channel-protocol", "nanobot-websocket-channel/mcp-webchat", "nanobot-websocket-channel/nanobot-webchat"]\n\n[tool.uv.sources]\nmcp-lms = { workspace = true, editable = true }\nmcp-webchat = { workspace = true, editable = true }\nnanobot-channel-protocol = { workspace = true, editable = true }\nnanobot-webchat = { workspace = true, editable = true }\nnanobot-ai = { url = "https://github.com/HKUDS/nanobot/archive/e7d371ec1e6531b28898ec2c869ef338e8dd46ec.zip" }' > /app/pyproject.toml
+RUN printf '[project]\nname = "nanobot-build"\nversion = "0.1.0"\nrequires-python = ">=3.14.2"\n\n[tool.uv.workspace]\nmembers = ["nanobot", "mcp/mcp-lms", "mcp/mcp-obs", "nanobot-websocket-channel/nanobot-channel-protocol", "nanobot-websocket-channel/mcp-webchat", "nanobot-websocket-channel/nanobot-webchat"]\n\n[tool.uv.sources]\nmcp-lms = { workspace = true, editable = true }\nmcp-obs = { workspace = true, editable = true }\nmcp-webchat = { workspace = true, editable = true }\nnanobot-channel-protocol = { workspace = true, editable = true }\nnanobot-webchat = { workspace = true, editable = true }\nnanobot-ai = { url = "https://github.com/HKUDS/nanobot/archive/e7d371ec1e6531b28898ec2c869ef338e8dd46ec.zip" }' > /app/pyproject.toml
 
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --package nanobot
