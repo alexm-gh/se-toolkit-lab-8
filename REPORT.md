@@ -2,13 +2,13 @@
 
 ## Task 1A — Bare agent
 
-### Q1: "What is 2+2?"
+<!--### Q1: "What is 2+2?"-->
 
 
 2 + 2 = 4
 
 
-### Q2: "What is the agentic loop?"
+<!--### Q2: "What is the agentic loop?"-->
 
 The agentic loop is the fundamental cycle that an AI agent follows to accomplish tasks autonomously. It typically consists of these core stages:
 
@@ -48,7 +48,7 @@ This loop enables autonomous behavior — the agent doesn't just respond once, b
 In my case, every time you give me a task, I go through this loop: I read the request, decide what tools to use, execute them, and then respond or continue iterating based on the results.
 
 
-### Q3: "What labs are available in our LMS?"
+<!--### Q3: "What labs are available in our LMS?"-->
 
 The agent **does not have access to the live LMS backend** yet. It explored the local filesystem using built-in tools (`list_dir`, `read_file`) and found lab task descriptions in the repository:
 
@@ -72,7 +72,7 @@ Would you like me to read the details of any specific task?
 
 ## Task 1B — Agent with LMS tools
 
-### Q1: "What is the agentic loop?"
+<!--### Q1: "What is the agentic loop?"-->
 
 
 The agentic loop refers to the iterative process that autonomous AI agents follow to accomplish tasks. While the specific implementation can vary between different AI systems, a typical     
@@ -91,14 +91,14 @@ In my case as nanobot, I follow this pattern by receiving your requests, analyzi
 determining the next steps in our conversation.    
 
 
-### Q2: "Is the LMS backend healthy?"
+<!--### Q2: "Is the LMS backend healthy?">
 
 
 Let me check the health of the LMS backend:                                                                                                                
 
 Yes, the LMS backend is healthy. The system is operational with 56 items and no errors reported.
 
-### Q3: "What labs are available?"
+<!--### Q3: "What labs are available?"-->
 
 I'll check what labs are available in the LMS system for you.                                                                                          
 
@@ -115,7 +115,7 @@ Here are the available labs in the LMS system:
 
 ## Task 1C — Skill prompt
 
-### Q1: "Show me the scores"
+<!--### Q1: "Show me the scores"-->
 
 
 I'll help you check the scores. First, let me see what labs are available in the system.
