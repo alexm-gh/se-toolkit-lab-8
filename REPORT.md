@@ -164,6 +164,55 @@ nanobot-1  | 2026-04-02 15:12:04.304 | INFO     | nanobot.agent.loop:run:280 - A
 ![Nanobot chat](screenshots/task2a_2.png)
 ![Nanobot chat](screenshots/task2a_3.png)
 
+<!---### Q1: what can you do?--->
+
+I'm nanobot, a helpful AI assistant! Here's what I can do:
+
+General Capabilities
+
+- Answer questions and help with research
+- Execute shell commands safely within the workspace
+- Manage files (read, write, edit) and navigate directories
+- Schedule reminders and recurring tasks
+- Search the web for current information
+- Spawn subagents for complex tasks
+
+LMS Backend Integration
+
+I can fetch live data from the LMS backend:
+- List available labs and registered learners
+- Get pass rates, completion rates, and group performance for specific labs
+- Show submission timelines and top performers
+- Check backend health status
+
+Memory & Organization
+
+- Maintain long-term memory of important facts and preferences
+- Keep a searchable history of our interactions
+- Organize information in structured formats
+
+Interactive Features
+
+- Present choices through interactive UI elements when needed
+- Send files (images, documents, audio, video) directly to you
+
+Just let me know what you'd like help with! Whether it's checking lab performance, finding information, managing tasks, or anything else, I'm here to assist.
+
+<!---### Q2: show me the scores--->
+
+I see you have several labs available. To show you the scores, I need to know which specific lab you're interested in. Here are the available labs:
+
+1. Lab 01 – Products, Architecture & Roles
+2. Lab 02 — Run, Fix, and Deploy a Backend Service
+3. Lab 03 — Backend API: Explore, Debug, Implement, Deploy
+4. Lab 04 — Testing, Front-end, and AI Agents
+5. Lab 05 — Data Pipeline and Analytics Dashboard
+6. Lab 06 — Build Your Own Agent
+7. Lab 07 — Build a Client with an AI Coding Agent
+8. lab-08
+
+Could you please specify which lab you'd like to see the scores for?
+
 ## Task 3A — Structured logging
 
 <!-- Paste happy-path and error-path log excerpts, VictoriaLogs query screenshot -->
