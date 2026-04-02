@@ -96,8 +96,22 @@ determining the next steps in our conversation.
 
 Let me check the health of the LMS backend:                                                                                                                
 
-Yes, the LMS backend is healthy. The system is operational with 56 items and no errors reported.                                                                                              
+Yes, the LMS backend is healthy. The system is operational with 56 items and no errors reported.
 
+### Q3: "What labs are available?"
+
+I'll check what labs are available in the LMS system for you.                                                                                          
+
+Here are the available labs in the LMS system:                                                                                                         
+
+ 1 Lab 01 – Products, Architecture & Roles                                                                                                             
+ 2 Lab 02 — Run, Fix, and Deploy a Backend Service                                                                                                     
+ 3 Lab 03 — Backend API: Explore, Debug, Implement, Deploy                                                                                             
+ 4 Lab 04 — Testing, Front-end, and AI Agents                                                                                                          
+ 5 Lab 05 — Data Pipeline and Analytics Dashboard                                                                                                      
+ 6 Lab 06 — Build Your Own Agent                                                                                                                       
+ 7 Lab 07 — Build a Client with an AI Coding Agent                                                                                                     
+ 8 Lab 08                                                                                                                   
 
 ## Task 1C — Skill prompt
 
