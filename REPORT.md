@@ -1,18 +1,125 @@
 # Lab 8 — Report
 
-Paste your checkpoint evidence below. Add screenshots as image files in the repo and reference them with `![description](path)`.
-
 ## Task 1A — Bare agent
 
-<!-- Paste the agent's response to "What is the agentic loop?" and "What labs are available in our LMS?" -->
+### Q1: "What is 2+2?"
+
+```
+2 + 2 = 4
+```
+
+### Q2: "What is the agentic loop?"
+
+The agentic loop is the fundamental cycle that an AI agent follows to accomplish tasks autonomously. It typically consists of these core stages:
+
+```
+**The Agentic Loop Cycle:**
+
+1. **Perceive** — Gather information from the environment
+   - Read user input
+   - Observe current state (files, system, context)
+   - Retrieve relevant memories or knowledge
+
+2. **Reason** — Process and plan
+   - Analyze the situation
+   - Determine goals and constraints
+   - Decide on next actions or create a plan
+
+3. **Act** — Execute decisions
+   - Call tools (file operations, web search, commands, etc.)
+   - Modify the environment
+   - Communicate results
+
+4. **Reflect** — Evaluate outcomes
+   - Check if the goal was achieved
+   - Learn from errors or unexpected results
+   - Adjust strategy if needed
+
+Then the loop repeats until the task is complete.
+
+**Why It Matters:**
+
+This loop enables autonomous behavior — the agent doesn't just respond once, but iteratively works toward a goal, adapting based on feedback from each action. More sophisticated agents may also include:
+
+- Memory updates — Storing learned information
+- Multi-step planning — Breaking complex tasks into subtasks
+- Self-correction — Detecting and fixing mistakes
+
+In my case, every time you give me a task, I go through this loop: I read the request, decide what tools to use, execute them, and then respond or continue iterating based on the results.
+```
+
+### Q3: "What labs are available in our LMS?"
+
+The agent **does not have access to the live LMS backend** yet. It explored the local filesystem using built-in tools (`list_dir`, `read_file`) and found lab task descriptions in the repository:
+
+```
+Based on my exploration of the workspace, here are the available labs in your LMS:
+
+**Required Labs:**
+1. Task 1 — Set Up the Agent (install nanobot, configure Qwen API, add MCP tools, write skill prompt)
+2. Task 2 — Deploy and Connect a Web Client (Dockerize nanobot, add WebSocket channel + Flutter chat UI)
+3. Task 3 — Give the Agent New Eyes (explore observability data, write log/trace MCP tools)
+4. Task 4 — Diagnose a Failure and Make the Agent Proactive (investigate a failure, schedule in-chat health checks, fix a planted bug)
+
+**Optional Labs:**
+1. Task 1 — Add a Telegram Bot Client (same agent, different interface)
+
+This is Lab 8 — "The Agent is the Interface" from the Software Engineering Toolkit course. The lab focuses on building an AI agent (nanobot) as a      
+natural-language interface to an LMS system, with capabilities for querying data, observability tools, and proactive health checks.                    
+
+Would you like me to read the details of any specific task?                                                      
+```
 
 ## Task 1B — Agent with LMS tools
 
-<!-- Paste the agent's response to "What labs are available?" and "Describe the architecture of the LMS system" -->
+### Q1: "What is the agentic loop?"
+
+```
+The agentic loop refers to the iterative process that autonomous AI agents follow to accomplish tasks. While the specific implementation can vary between different AI systems, a typical     
+agentic loop includes these core phases:                                                                                                                                                      
+
+ 1 Perception/Observation: The agent gathers information from its environment, user requests, or available data sources.                                                                      
+ 2 Reasoning/Planning: The agent analyzes the gathered information, determines what needs to be done, and formulates a plan of action.                                                        
+ 3 Action: The agent executes specific tools, commands, or operations to move toward its goal.                                                                                                
+ 4 Observation/Evaluation: The agent observes the results of its actions and evaluates progress toward the goal.                                                                              
+ 5 Iteration: The agent returns to planning based on new observations, adjusting its approach as needed until the task is completed.                                                          
+
+This cycle continues until the agent achieves its objective or determines that it cannot proceed further. The loop allows AI agents to handle complex, multi-step tasks by breaking them down 
+into smaller, manageable actions while adapting to new information or unexpected outcomes during execution.                                                                                   
+
+In my case as nanobot, I follow this pattern by receiving your requests, analyzing them, using appropriate tools to gather information or perform actions, observing the results, and then    
+determining the next steps in our conversation.    
+```
+
+### Q2: "Is the LMS backend healthy?"
+
+```
+Let me check the health of the LMS backend:                                                                                                                
+
+Yes, the LMS backend is healthy. The system is operational with 56 items and no errors reported.                                                                                              
+```
 
 ## Task 1C — Skill prompt
 
-<!-- Paste the agent's response to "Show me the scores" (without specifying a lab) -->
+### Q1: "Show me the scores"
+
+```
+I'll help you check the scores. First, let me see what labs are available in the system.
+
+I can see there are 8 labs available in the system. To show you the scores, I need to know which specific lab you're interested in. Here are the       
+available labs:                                                                                                                                        
+
+ 1 Lab 01 – Products, Architecture & Roles                                                                                                             
+ 2 Lab 02 — Run, Fix, and Deploy a Backend Service                                                                                                     
+ 3 Lab 03 — Backend API: Explore, Debug, Implement, Deploy                                                                                             
+ 4 Lab 04 — Testing, Front-end, and AI Agents                                                                                                          
+ 5 Lab 05 — Data Pipeline and Analytics Dashboard                                                                                                      
+ 6 Lab 06 — Build Your Own Agent                                                                                                                       
+ 7 Lab 07 — Build a Client with an AI Coding Agent                                                                                                     
+ 8 lab-08                                                                                                                                              
+
+Could you please specify which lab you'd like to see the scores for?                                                        
+```
 
 ## Task 2A — Deployed agent
 
