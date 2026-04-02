@@ -162,6 +162,7 @@ nanobot-1  | 2026-04-02 15:12:04.304 | INFO     | nanobot.agent.loop:run:280 - A
 
 ![Nanobot chat](screenshots/task2a_1.png)
 ![Nanobot chat](screenshots/task2a_2.png)
+![Nanobot chat](screenshots/task2a_3.png)
 
 ## Task 3A — Structured logging
 
