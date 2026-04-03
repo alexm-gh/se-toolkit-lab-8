@@ -1735,6 +1735,29 @@ nanobot-1  | 2026-04-03 10:03:05.718 | DEBUG    | nanobot.agent.memory:maybe_con
 ## Task 4B — Proactive health check
 
 <!-- Screenshot or transcript of the proactive health report that appears in the Flutter chat -->
+
+Before:
+@router.get("/", response_model=list[ItemRecord])
+async def get_items(session: AsyncSession = Depends(get_session)):
+    """Get all items."""
+    try:
+        return await read_items(session)
+    except Exception as exc:
+        logger.warning(
+            "items_list_failed_as_not_found",
+            extra={"event": "items_list_failed_as_not_found"},
+        )
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Items not found",
+        ) from exc
+After (fixed):
+
+@router.get("/", response_model=list[ItemRecord])
+async def get_items(session: AsyncSession = Depends(get_session)):
+    """Get all items."""
+    return await read_items(session)
+
 docker compose --env-file .env.docker.secret logs nanobot | grep cron
 nanobot-1  | 2026-04-03 10:01:09.052 | INFO     | nanobot.cron.service:_load_store:85 - Cron: jobs.json modified externally, reloading
 nanobot-1  | 2026-04-03 10:01:09.053 | INFO     | nanobot.cron.service:start:202 - Cron service started with 0 jobs
