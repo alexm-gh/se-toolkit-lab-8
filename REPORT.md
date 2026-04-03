@@ -1169,6 +1169,10 @@ backend-1  | socket.gaierror: [Errno -2] Name or service not known
 ![Traces healthy](screenshots/task3b_healthy.png)
 ![Traces unhealthy](screenshots/task3b_unhealthy.png)
 
+Trace ids when failed: c8f35f1052c50161e5d46cff23011417
+30d2cb026bc796b2f25ae228ab1c6d1e
+5d7f045ad34661b9716e496abe4cab6c
+
 ## Task 3C — Observability MCP tools
 
 I'll check for any LMS backend errors in the last 10 minutes using the observability tools. Good news! There are no errors from the Learning Management Service in the last 10 minutes. The backend appears to be running smoothly without any reported issues during this time period.
