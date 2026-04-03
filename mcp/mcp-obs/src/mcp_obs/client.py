@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+
 import httpx
 
 
@@ -26,6 +28,19 @@ class ObsClient:
     async def __aexit__(self, *args) -> None:
         await self.close()
 
+    @staticmethod
+    def _parse_ndjson(text: str) -> list[dict]:
+        """Parse newline-delimited JSON (VictoriaLogs format)."""
+        results = []
+        for line in text.strip().splitlines():
+            line = line.strip()
+            if line:
+                try:
+                    results.append(json.loads(line))
+                except json.JSONDecodeError:
+                    continue
+        return results
+
     # VictoriaLogs methods
 
     async def logs_search(
@@ -35,7 +50,7 @@ class ObsClient:
         time_range: str = "10m",
     ) -> list[dict]:
         """Search logs using LogsQL query.
-        
+
         Args:
             query: LogsQL query string (e.g., 'severity:ERROR service.name:"backend"')
             limit: Max results to return
@@ -46,7 +61,7 @@ class ObsClient:
         params = {"query": full_query, "limit": limit}
         response = await self._http.get(url, params=params)
         response.raise_for_status()
-        return response.json()
+        return self._parse_ndjson(response.text)
 
     async def logs_error_count(
         self,
@@ -61,7 +76,7 @@ class ObsClient:
         params = {"query": query, "limit": 1000}
         response = await self._http.get(url, params=params)
         response.raise_for_status()
-        data = response.json()
+        data = self._parse_ndjson(response.text)
         return {"count": len(data), "time_range": time_range, "service": service}
 
     # VictoriaTraces methods
