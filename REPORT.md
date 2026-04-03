@@ -2,17 +2,17 @@
 
 ## Task 1A — Bare agent
 
-### Q1: "What is 2+2?"
+<!--### Q1: "What is 2+2?"-->
 
-```
+
 2 + 2 = 4
-```
 
-### Q2: "What is the agentic loop?"
+
+<!--### Q2: "What is the agentic loop?"-->
 
 The agentic loop is the fundamental cycle that an AI agent follows to accomplish tasks autonomously. It typically consists of these core stages:
 
-```
+
 **The Agentic Loop Cycle:**
 
 1. **Perceive** — Gather information from the environment
@@ -46,13 +46,13 @@ This loop enables autonomous behavior — the agent doesn't just respond once, b
 - Self-correction — Detecting and fixing mistakes
 
 In my case, every time you give me a task, I go through this loop: I read the request, decide what tools to use, execute them, and then respond or continue iterating based on the results.
-```
 
-### Q3: "What labs are available in our LMS?"
+
+<!--### Q3: "What labs are available in our LMS?"-->
 
 The agent **does not have access to the live LMS backend** yet. It explored the local filesystem using built-in tools (`list_dir`, `read_file`) and found lab task descriptions in the repository:
 
-```
+
 Based on my exploration of the workspace, here are the available labs in your LMS:
 
 **Required Labs:**
@@ -68,13 +68,13 @@ This is Lab 8 — "The Agent is the Interface" from the Software Engineering Too
 natural-language interface to an LMS system, with capabilities for querying data, observability tools, and proactive health checks.                    
 
 Would you like me to read the details of any specific task?                                                      
-```
+
 
 ## Task 1B — Agent with LMS tools
 
-### Q1: "What is the agentic loop?"
+<!--### Q1: "What is the agentic loop?"-->
 
-```
+
 The agentic loop refers to the iterative process that autonomous AI agents follow to accomplish tasks. While the specific implementation can vary between different AI systems, a typical     
 agentic loop includes these core phases:                                                                                                                                                      
 
@@ -89,21 +89,35 @@ into smaller, manageable actions while adapting to new information or unexpected
 
 In my case as nanobot, I follow this pattern by receiving your requests, analyzing them, using appropriate tools to gather information or perform actions, observing the results, and then    
 determining the next steps in our conversation.    
-```
 
-### Q2: "Is the LMS backend healthy?"
 
-```
+<!--### Q2: "Is the LMS backend healthy?">
+
+
 Let me check the health of the LMS backend:                                                                                                                
 
-Yes, the LMS backend is healthy. The system is operational with 56 items and no errors reported.                                                                                              
-```
+Yes, the LMS backend is healthy. The system is operational with 56 items and no errors reported.
+
+<!--### Q3: "What labs are available?"-->
+
+I'll check what labs are available in the LMS system for you.                                                                                          
+
+Here are the available labs in the LMS system:                                                                                                         
+
+ 1 Lab 01 – Products, Architecture & Roles                                                                                                             
+ 2 Lab 02 — Run, Fix, and Deploy a Backend Service                                                                                                     
+ 3 Lab 03 — Backend API: Explore, Debug, Implement, Deploy                                                                                             
+ 4 Lab 04 — Testing, Front-end, and AI Agents                                                                                                          
+ 5 Lab 05 — Data Pipeline and Analytics Dashboard                                                                                                      
+ 6 Lab 06 — Build Your Own Agent                                                                                                                       
+ 7 Lab 07 — Build a Client with an AI Coding Agent                                                                                                     
+ 8 Lab 08                                                                                                                   
 
 ## Task 1C — Skill prompt
 
-### Q1: "Show me the scores"
+<!--### Q1: "Show me the scores"-->
 
-```
+
 I'll help you check the scores. First, let me see what labs are available in the system.
 
 I can see there are 8 labs available in the system. To show you the scores, I need to know which specific lab you're interested in. Here are the       
@@ -119,15 +133,85 @@ available labs:
  8 lab-08                                                                                                                                              
 
 Could you please specify which lab you'd like to see the scores for?                                                        
-```
+
 
 ## Task 2A — Deployed agent
 
-<!-- Paste a short nanobot startup log excerpt showing the gateway started inside Docker -->
+nanobot-1  | Using config: /app/nanobot/config.resolved.json
+nanobot-1  | 🐈 Starting nanobot gateway version 0.1.4.post5 on port 18790...
+nanobot-1  | 2026-04-02 15:12:02.818 | DEBUG    | nanobot.channels.registry:discover_all:64 - Skipping built-in channel 'matrix': Matrix dependencies not installed. Run: pip install nanobot-ai[matrix]
+nanobot-1  | Warning: No channels enabled
+nanobot-1  | ✓ Heartbeat: every 1800s
+nanobot-1  | 2026-04-02 15:12:02.993 | INFO     | nanobot.cron.service:start:202 - Cron service started with 0 jobs
+nanobot-1  | 2026-04-02 15:12:02.993 | INFO     | nanobot.heartbeat.service:start:124 - Heartbeat started (every 1800s)
+nanobot-1  | 2026-04-02 15:12:03.147 | WARNING  | nanobot.channels.manager:start_all:82 - No channels enabled
+nanobot-1  | 2026-04-02 15:12:04,300 INFO [mcp.server.lowlevel.server] [server.py:727] [trace_id=0 span_id=0 resource.service.name=mcp-lms trace_sampled=False] - Processing request of type ListToolsRequest
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_health' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_labs' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_learners' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_pass_rates' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_timeline' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_groups' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_top_learners' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_completion_rate' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | DEBUG    | nanobot.agent.tools.mcp:connect_mcp_servers:226 - MCP: registered tool 'mcp_lms_lms_sync_pipeline' from server 'lms'
+nanobot-1  | 2026-04-02 15:12:04.304 | INFO     | nanobot.agent.tools.mcp:connect_mcp_servers:246 - MCP server 'lms': connected, 9 tools registered
+nanobot-1  | 2026-04-02 15:12:04.304 | INFO     | nanobot.agent.loop:run:280 - Agent loop started
 
 ## Task 2B — Web client
 
-<!-- Screenshot of a conversation with the agent in the Flutter web app -->
+![Nanobot chat](screenshots/task2a_1.png)
+![Nanobot chat](screenshots/task2a_2.png)
+![Nanobot chat](screenshots/task2a_3.png)
+
+<!---### Q1: what can you do?--->
+
+I'm nanobot, a helpful AI assistant! Here's what I can do:
+
+General Capabilities
+
+- Answer questions and help with research
+- Execute shell commands safely within the workspace
+- Manage files (read, write, edit) and navigate directories
+- Schedule reminders and recurring tasks
+- Search the web for current information
+- Spawn subagents for complex tasks
+
+LMS Backend Integration
+
+I can fetch live data from the LMS backend:
+- List available labs and registered learners
+- Get pass rates, completion rates, and group performance for specific labs
+- Show submission timelines and top performers
+- Check backend health status
+
+Memory & Organization
+
+- Maintain long-term memory of important facts and preferences
+- Keep a searchable history of our interactions
+- Organize information in structured formats
+
+Interactive Features
+
+- Present choices through interactive UI elements when needed
+- Send files (images, documents, audio, video) directly to you
+
+Just let me know what you'd like help with! Whether it's checking lab performance, finding information, managing tasks, or anything else, I'm here to assist.
+
+<!---### Q2: show me the scores--->
+
+I see you have several labs available. To show you the scores, I need to know which specific lab you're interested in. Here are the available labs:
+
+1. Lab 01 – Products, Architecture & Roles
+2. Lab 02 — Run, Fix, and Deploy a Backend Service
+3. Lab 03 — Backend API: Explore, Debug, Implement, Deploy
+4. Lab 04 — Testing, Front-end, and AI Agents
+5. Lab 05 — Data Pipeline and Analytics Dashboard
+6. Lab 06 — Build Your Own Agent
+7. Lab 07 — Build a Client with an AI Coding Agent
+8. lab-08
+
+Could you please specify which lab you'd like to see the scores for?
 
 ## Task 3A — Structured logging
 
