@@ -19,9 +19,24 @@ Use VictoriaLogs and VictoriaTraces MCP tools to investigate errors and trace re
 
 ## Strategy
 
-### When user asks about errors
+### When user asks "What went wrong?" or "Check system health"
 
-1. Start with `logs_error_count` for the LMS backend service with a narrow time window (e.g., "10m" or "1h")
+Do a full one-shot investigation:
+
+1. **`logs_error_count`** with a fresh recent window (e.g., `time_range="10m"`, `service="Learning Management Service"`)
+2. If errors exist, **`logs_search`** scoped to the failing service:
+   - Query: `severity:ERROR service.name:"Learning Management Service"`
+   - Extract `trace_id` from the most recent error log
+3. **`traces_get`** for that `trace_id` to see the full failure path
+4. **Summarize** with both log evidence AND trace evidence:
+   - Name the affected service
+   - Name the root failing operation
+   - Mention any discrepancy between what the logs show vs what the backend reports
+   - Don't dump raw JSON
+
+### When user asks about errors in a time window
+
+1. Start with `logs_error_count` for the LMS backend service with the specified time window
 2. If errors exist, use `logs_search` to find recent error logs:
    - Query: `severity:ERROR service.name:"Learning Management Service"`
    - Extract any `trace_id` from the log results
